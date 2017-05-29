@@ -1,12 +1,15 @@
 {
   "name": "cjsx2jsx",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Convert CJSX files to modern JSX",
   "main": "lib/index.js",
   "scripts": {
     "prepublish": "npm run compile",
     "compile": "rm -rf lib/ && babel src -d lib",
     "test": "echo 'No tests'"
+  },
+  "bin": {
+    "cjsx2jsx": "./bin/cjsx2jsx"
   },
   "author": "Gordon L. Hempton <ghempton@gmail.com>",
   "license": "ISC",
