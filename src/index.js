@@ -22,6 +22,11 @@ export function run(args) {
   source = transform(source, {
     plugins: [createElementTransform],
   }).code;
-  source = bindToArrowTransform( {source: source}, {jscodeshift: jscodeshift});
+
+  // Returns null if there was nothing to transform
+  const bindToArrowSource = bindToArrowTransform( {source: source}, {jscodeshift: jscodeshift});
+  if (bindToArrowSource) {
+    source = bindToArrowSource;
+  }
   console.log(source);
 }
