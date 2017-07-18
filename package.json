@@ -1,6 +1,6 @@
 {
   "name": "cjsx2jsx",
-  "version": "0.0.6",
+  "version": "0.1.0",
   "description": "Convert CJSX files to modern JSX",
   "main": "lib/index.js",
   "scripts": {
