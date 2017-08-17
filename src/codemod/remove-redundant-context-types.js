@@ -1,5 +1,9 @@
 export default function transformer(file, api) {
   const j = api.jscodeshift;
+
+  const removeNodeAtPath = path => {
+    j(path).replaceWith();
+  };
   
   const classPropertyCopiedFromAssignment = (propertyName, copiedFrom) => ({
     type: "AssignmentExpression",
@@ -20,10 +24,6 @@ export default function transformer(file, api) {
     .filter(path => path.node.superClass)
     .forEach(path => {
       const superClass = path.node.superClass.name;
-    
-      const removeNodeAtPath = path => {
-        j(path).replaceWith();
-      };
     
       const initClass = j(path).find(j.MethodDefinition, {
         static: true,
