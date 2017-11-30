@@ -1,6 +1,6 @@
 {
   "name": "cjsx2jsx",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Convert CJSX files to modern JSX",
   "main": "lib/index.js",
   "scripts": {
@@ -25,7 +25,7 @@
     "babel-register": "^6.24.1",
     "babel-runtime": "^6.23.0",
     "coffee-react-transform": "^5.0.0",
-    "decaffeinate": "^3.1.1",
+    "decaffeinate": "^3.3.13",
     "jscodeshift": "^0.3.32",
     "react-codemod": "^4.0.0"
   }
